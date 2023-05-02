@@ -1,20 +1,20 @@
-using BubberDinner.Domain.Aggregates;
+using BuberDinner.Domain.Aggregates;
 using BuberDinner.Application.Common.Interfaces.Persistence;
 
 namespace BuberDinner.Infrastructure.Persistence;
 
 public class DinnerRepository : IDinnerRepository
 {
-    private readonly BubberDinnerDBContext _dbContext;
+    private readonly BuberDinnerDBContext _dbContext;
 
-    public DinnerRepository(BubberDinnerDBContext dbContext)
+    public DinnerRepository(BuberDinnerDBContext dbContext)
     {
         _dbContext = dbContext;
     }
 
     public async Task AddAsync(Dinner dinner)
     {
-        await _dbContext.Dinners.AddAsync(dinner);
+       // await _dbContext.Dinners.AddAsync(dinner);
         await _dbContext.SaveChangesAsync(); 
     }
 
@@ -23,7 +23,7 @@ public class DinnerRepository : IDinnerRepository
         return await _dbContext.Dinners.SigleOrDefaultAsync(dinner => dinner.Id == id);
     }
 
-    public Task<int> GetConfirmedDinnerGuestsCountAsyne(Guid dinnerId)
+    public Task<int> GetConfirmedDinnerGuestsCountAsync(Guid dinnerId)
     {
         throw new NotImplementedException();
     }

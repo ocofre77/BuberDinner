@@ -1,4 +1,4 @@
-using BubberDinner.Domain.Aggregates;
+using BuberDinner.Domain.Aggregates;
 
 namespace BuberDinner.Application.Common.Interfaces.Persistence;
 public interface IDinnerRepository : IRepository<Dinner, Guid>
@@ -9,7 +9,7 @@ public interface IDinnerRepository : IRepository<Dinner, Guid>
 
     IAsyncEnumerable<Dinner> ListUserDinnersAsync(Guid userId);
 
-    Task<int> GetConfirmedDinnerGuestsCountAsyne(Guid dinnerId);
+    Task<int> GetConfirmedDinnerGuestsCountAsync(Guid dinnerId);
 
     Task<int> GetPendingDinnerGuestsCountAsync(Guid dinnerId);
 

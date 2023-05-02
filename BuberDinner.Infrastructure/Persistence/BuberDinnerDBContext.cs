@@ -1,11 +1,11 @@
 using System.Data.Entity;
-//using System.Data.Entity. .Metadata.Builders;
+using BuberDinner.Domain.Aggregates;
 
 namespace BuberDinner.Infrastructure.Persistence;
 
-public class BubberDinnerDBContext: DbContext
+public class BuberDinnerDBContext: DbContext
 {
-    public BubberDinnerDBContext()
+    public BuberDinnerDBContext()
     {
 
     }

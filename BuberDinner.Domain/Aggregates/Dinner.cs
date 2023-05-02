@@ -1,4 +1,4 @@
-namespace BubberDinner.Domain.Aggregates;
+namespace BuberDinner.Domain.Aggregates;
 
 public class Dinner{
     
